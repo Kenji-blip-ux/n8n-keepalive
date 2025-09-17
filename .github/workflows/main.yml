@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping n8n Render
-        run: curl -s https://n8n-kenji.onrender.com > /dev/null
-
-
-
+        run: |
+          echo "⏰ $(date) - Pinging n8n..."
+          curl -I https://n8n-kenji.onrender.com
