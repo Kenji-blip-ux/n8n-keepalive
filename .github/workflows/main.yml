@@ -2,14 +2,15 @@ name: Keep n8n Alive
 
 on:
   schedule:
-    - cron: "*/1 * * * *"   # هادي معناها كل دقيقة
-  workflow_dispatch:        # باش تقدر تشغلو يدوياً من Actions
+    - cron: "*/1 * * * *"
+  workflow_dispatch:
 
 jobs:
   curl:
     runs-on: ubuntu-latest
     steps:
-      - name: Call n8n
-        run: curl https://XXXXXXX.n8n.cloud/
+      - name: Ping n8n Render
+        run: curl -s https://n8n-kenji.onrender.com > /dev/null
+
 
 
