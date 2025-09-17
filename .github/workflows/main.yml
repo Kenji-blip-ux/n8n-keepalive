@@ -1,0 +1,13 @@
+name: Keep n8n Alive
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"  
+  workflow_dispatch:        
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call n8n Render URL
+        run: curl -s https://n8n-kenji.onrender.com > /dev/null
