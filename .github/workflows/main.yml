@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call n8n
-        run: curl https://YOUR-N8N-URL-HERE/
+        run: curl https://XXXXXXX.n8n.cloud/
+
 
